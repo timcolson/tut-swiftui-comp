@@ -36,7 +36,7 @@ struct RemindersList: View {
                 })
             }
             .listStyle(PlainListStyle())
-            .navigationTitle("My Reminders")
+            .navigationTitle("My Reminders v1")
         }
     }
 }
