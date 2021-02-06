@@ -20,7 +20,7 @@ struct ReminderListItem: View {
     private var titleView: some View {
         VStack (alignment: .leading){
             Text(reminder.title)
-            Text(reminder.assignee).modifier(TaskBylineStyle())
+            Text(reminder.assignee).taskBylineStyle()
         }
     }
     
@@ -44,6 +44,12 @@ struct TaskBylineStyle : ViewModifier {
             .padding(4)
             .background(Color.blue)
             .clipShape(RoundedRectangle(cornerRadius: 10))
+    }
+}
+
+extension Text {
+    func taskBylineStyle () -> some View {
+        self.modifier(TaskBylineStyle())
     }
 }
 
