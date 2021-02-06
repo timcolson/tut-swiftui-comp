@@ -12,7 +12,7 @@ struct ReminderListItem: View {
     
     var body: some View {
         HStack {
-            statusButton; titleView   // semicolon visual 
+            statusButton; titleView   // semicolon visual
         }
     }
     
@@ -20,12 +20,7 @@ struct ReminderListItem: View {
     private var titleView: some View {
         VStack (alignment: .leading){
             Text(reminder.title)
-            Text(reminder.assignee)
-                .font(.caption)
-                .foregroundColor(.white)
-                .padding(4)
-                .background(Color.blue)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+            Text(reminder.assignee).modifier(TaskBylineStyle())
         }
     }
     
@@ -41,6 +36,16 @@ struct ReminderListItem: View {
     }
 }
 
+struct TaskBylineStyle : ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.caption)
+            .foregroundColor(.white)
+            .padding(4)
+            .background(Color.blue)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+    }
+}
 
 // MARK: - Preview
 struct ReminderListItem_Previews: PreviewProvider {
