@@ -20,7 +20,12 @@ struct ReminderListItem: View {
     private var titleView: some View {
         VStack (alignment: .leading){
             Text(reminder.title)
-            Text(reminder.assignee).font(.caption) // mod > 2 ? make custom style
+            Text(reminder.assignee)
+                .font(.caption)
+                .foregroundColor(.white)
+                .padding(4)
+                .background(Color.blue)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
         }
     }
     
