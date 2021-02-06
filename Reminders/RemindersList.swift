@@ -2,6 +2,7 @@ import SwiftUI
 
 /// A view that displays a list of reminders
 struct RemindersList: View {
+
     /// The reminders belonging to this list
     @Binding var reminders: [Reminder]
 
@@ -9,35 +10,45 @@ struct RemindersList: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(reminders) { reminder in
-                    HStack {
-                        Button(action: {
-                            if let index = reminders.firstIndex(of: reminder) {
-                                reminders[index].isComplete.toggle()
-                            }
-                        }, label: {
-                            Image(systemName: reminder.isComplete ? "largecircle.fill.circle" : "circle")
-                                .imageScale(.large)
-                        })
-                        VStack {
-                            Text(reminder.title)
-                        }
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                }
-                Button(action: {
-                    // TODO: Add a new reminder
-                    print("Add new reminder code!")
-                }, label: {
-                    HStack {
-                        Image(systemName: "plus.circle.fill")
-                        Text("Add Reminder")
-                    }
-                })
+                reminderListItems
+                newReminderButton
             }
             .listStyle(PlainListStyle())
-            .navigationTitle("My Reminders v1")
+            .navigationTitle("My Reminders v2")
         }
+    }
+    
+    /// The views representing each reminder in the list
+    private var reminderListItems: some View {
+        ForEach(reminders) { reminder in
+            HStack {
+                Button(action: {
+                    if let index = reminders.firstIndex(of: reminder) {
+                        reminders[index].isComplete.toggle()
+                    }
+                }, label: {
+                    Image(systemName: reminder.isComplete ? "largecircle.fill.circle" : "circle")
+                        .imageScale(.large)
+                })
+                VStack {
+                    Text(reminder.title)
+                }
+            }
+            .buttonStyle(PlainButtonStyle())
+        }
+    }
+    
+    /// A button that adds a new reminder to the bottom of the list
+    private var newReminderButton: some View {
+        Button(action: {
+            // TODO: Add a new reminder
+            print("Add new reminder code!")
+        }, label: {
+            HStack {
+                Image(systemName: "plus.circle.fill")
+                Text("Add Reminder")
+            }
+        })
     }
 }
 
