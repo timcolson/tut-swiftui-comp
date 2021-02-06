@@ -14,29 +14,41 @@ struct RemindersList: View {
                 newReminderButton
             }
             .listStyle(PlainListStyle())
-            .navigationTitle("My Reminders v2")
+            .navigationTitle("My Reminders v3")
         }
     }
     
     /// The views representing each reminder in the list
     private var reminderListItems: some View {
         ForEach(reminders) { reminder in
-            HStack {
-                Button(action: {
-                    if let index = reminders.firstIndex(of: reminder) {
-                        reminders[index].isComplete.toggle()
-                    }
-                }, label: {
-                    Image(systemName: reminder.isComplete ? "largecircle.fill.circle" : "circle")
-                        .imageScale(.large)
-                })
-                VStack {
-                    Text(reminder.title)
+            view(for: reminder) {
+                // action closure
+                if let index = reminders.firstIndex(of: reminder) {
+                    reminders[index].isComplete.toggle()
                 }
             }
-            .buttonStyle(PlainButtonStyle())
         }
     }
+    /// Return a view for the given reminder
+    private func view(for reminder: Reminder,
+                      _ didTapButton: @escaping () -> Void) -> some View {
+        
+        HStack {
+            Button(action: {
+                if let index = reminders.firstIndex(of: reminder) {
+                    reminders[index].isComplete.toggle()
+                }
+            }, label: {
+                Image(systemName: reminder.isComplete ? "largecircle.fill.circle" : "circle")
+                    .imageScale(.large)
+            })
+            VStack {
+                Text(reminder.title)
+            }
+        }
+        .buttonStyle(PlainButtonStyle())
+    }
+
     
     /// A button that adds a new reminder to the bottom of the list
     private var newReminderButton: some View {
