@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C2E6D6825CEDFF90017873C /* ReminderListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2E6D6725CEDFF90017873C /* ReminderListItem.swift */; };
 		2C3C4E7425CCB403007A6CF3 /* RemindersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C4E7325CCB403007A6CF3 /* RemindersApp.swift */; };
 		2C3C4E7625CCB403007A6CF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C4E7525CCB403007A6CF3 /* ContentView.swift */; };
 		2C3C4E7825CCB406007A6CF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C4E7725CCB406007A6CF3 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C2E6D6725CEDFF90017873C /* ReminderListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListItem.swift; sourceTree = "<group>"; };
 		2C3C4E7025CCB403007A6CF3 /* Reminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3C4E7325CCB403007A6CF3 /* RemindersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersApp.swift; sourceTree = "<group>"; };
 		2C3C4E7525CCB403007A6CF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				2C3C4E7325CCB403007A6CF3 /* RemindersApp.swift */,
 				2C3C4E7525CCB403007A6CF3 /* ContentView.swift */,
 				2C3C4E9625CCD62A007A6CF3 /* RemindersList.swift */,
+				2C2E6D6725CEDFF90017873C /* ReminderListItem.swift */,
 				2C3C4E8625CCB465007A6CF3 /* Reminder.swift */,
 				2C3C4E7725CCB406007A6CF3 /* Assets.xcassets */,
 				2C3C4E7C25CCB406007A6CF3 /* Info.plist */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2E6D6825CEDFF90017873C /* ReminderListItem.swift in Sources */,
 				2C3C4E9725CCD62A007A6CF3 /* RemindersList.swift in Sources */,
 				2C3C4E7625CCB403007A6CF3 /* ContentView.swift in Sources */,
 				2C3C4E7425CCB403007A6CF3 /* RemindersApp.swift in Sources */,
