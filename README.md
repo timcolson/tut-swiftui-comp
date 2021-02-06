@@ -25,4 +25,27 @@ Hudson
 4. Create View extensions for Styling
 5. Use ButtonStyle and friends
 
+## Getting Started
 
+If you are interested in working thru the tutorial, 
+
+> git clone https://github.com/timcolson/tut-swiftui-comp
+
+Start with v1...
+> git checkout tags/v1
+
+FYI - to return back to the main version
+> git co main 
+
+### Summary of Versions
+v1 - initial working version
+
+v2 - 𝚫 reminderListItems & newReminderButton to vars
+
+v3 - make a func to display reminder
+
+v4 - move ReminderItem to separate view
+
+v5 - make view Modifier for style
+
+v5.1 - use view modifier from extension
