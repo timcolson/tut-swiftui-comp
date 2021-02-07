@@ -59,10 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				2C3C4E7325CCB403007A6CF3 /* RemindersApp.swift */,
-				2C3C4E7525CCB403007A6CF3 /* ContentView.swift */,
-				2C3C4E9625CCD62A007A6CF3 /* RemindersList.swift */,
-				2C2E6D6725CEDFF90017873C /* ReminderListItem.swift */,
-				2C3C4E8625CCB465007A6CF3 /* Reminder.swift */,
+				2CABF84625D0984F00CD8902 /* Views */,
+				2CABF84725D0985B00CD8902 /* Model */,
 				2C3C4E7725CCB406007A6CF3 /* Assets.xcassets */,
 				2C3C4E7C25CCB406007A6CF3 /* Info.plist */,
 				2C3C4E7925CCB406007A6CF3 /* Preview Content */,
@@ -76,6 +74,24 @@
 				2C3C4E7A25CCB406007A6CF3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2CABF84625D0984F00CD8902 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C3C4E7525CCB403007A6CF3 /* ContentView.swift */,
+				2C3C4E9625CCD62A007A6CF3 /* RemindersList.swift */,
+				2C2E6D6725CEDFF90017873C /* ReminderListItem.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2CABF84725D0985B00CD8902 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C3C4E8625CCB465007A6CF3 /* Reminder.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
